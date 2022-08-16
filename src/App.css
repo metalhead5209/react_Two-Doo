@@ -39,6 +39,7 @@ h2 {
   font-weight: 700;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:rgb(3, 4, 4);
+  margin-bottom: 5px;
 }
 
 .form-btn:hover {
@@ -53,6 +54,7 @@ h2 {
   justify-content: center;
   height: 400px;
   overflow: auto; 
+  scroll-behavior: smooth;
 }
 
 .todo-list {
@@ -104,5 +106,18 @@ h2 {
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+
+
 
 

@@ -3,15 +3,16 @@ import React, { useState } from "react";
 
 const TodoForm = (props) => {
 
-  const [ name, setName ] = useState('');
+  const [ taskName, setTaskName ] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTask(name);
+    props.addTask(taskName);
+    setTaskName('')
   };
 
   const handleChange = (e) => {
-    setName(e.target.value)
+    setTaskName(e.target.value)
   }
 
   return (
@@ -23,7 +24,7 @@ const TodoForm = (props) => {
       type="text" 
       className="form-input"
       onChange={handleChange} 
-      value={name} 
+      value={taskName} 
       /> <br />
       <button className="form-btn">Add Task</button>
     </form>

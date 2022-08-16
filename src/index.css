@@ -29,6 +29,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reapply the pointer cursor for anchor tags */
 a, button {
   cursor: revert;
@@ -99,5 +103,4 @@ meter {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
-
 
