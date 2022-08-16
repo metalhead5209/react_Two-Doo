@@ -12,20 +12,28 @@ function App() {
 
   const [tasks, setTasks] = useState(_TASKS);
 
-  const storage = localStorage;
-  // storage.setItem("task-data", JSON.stringify(tasks));
 
-  let retrievedData = JSON.parse(storage.getItem("task-data"));
-
-  const todoList = tasks.map((task) => (
-    <Todo id={task.id} name={task.name} key={task.id} />
-  ));
 
   const addTask = (taskName) => {
     const newTask = { id: `td-${nanoid()}`, name: taskName };
-    // storage.setItem("task-data", JSON.stringify(tasks));
-    setTasks([...tasks, newTask]);
+    tasks.push(newTask)
+    setTasks([...tasks]);
   };
+
+  const deleteTask = (id) => {
+    const currentTasks = tasks.filter((task) => id !== task.id)
+    setTasks(currentTasks) 
+    console.log(currentTasks)
+  };
+
+  const todoList = tasks.map((task) => (
+    <Todo 
+    id={task.id} 
+    name={task.name} 
+    key={task.id} 
+    deleteTask={deleteTask}
+    />
+  ));
 
   return (
     <>
@@ -34,7 +42,7 @@ function App() {
         <h2>Please enter a task!</h2>
 
         <TodoForm addTask={addTask} />
-        <button onClick={() => storage.removeItem('task-data')}>Remove</button>
+      
 
         <div className="todo-list-container">
           <ul className="todo-list">{todoList}</ul>

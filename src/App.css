@@ -65,6 +65,7 @@ h2 {
 
 .todo-list-item {
   font-size: 2em;
+  background-color: rgb(252, 252, 252);
 }
 
 .todo-name-container {
@@ -78,11 +79,6 @@ h2 {
   border-top-right-radius: 5px;
 }
 
-.todo-list-item:nth-of-type(even) {
-  background-color: rgba(0, 0, 0, 0.829);
-  color: white;
-}
-
 .todo-list-item:nth-child(n+1) {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -91,7 +87,7 @@ h2 {
 .todo-btn-group {
   padding: .2em;
   margin: 0;
-  background-color: rgba(58, 53, 110, 0.3);
+  background-color: rgba(230, 229, 240, 0.3);
   display: flex;
   justify-content: space-evenly;
 }
