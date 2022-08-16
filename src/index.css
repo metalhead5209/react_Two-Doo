@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 24px;
+  line-height: 30px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,6 +13,7 @@
   -webkit-text-size-adjust: 100%;
   margin: 20px auto;
   max-width: 800px;
+  
   
 }
 
