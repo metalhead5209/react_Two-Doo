@@ -73,7 +73,7 @@ h2 {
  
 }
 
-.todo-name-container:nth-of-type(1){
+.todo-name-container:nth-child(1){
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -81,6 +81,11 @@ h2 {
 .todo-list-item:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.829);
   color: white;
+}
+
+.todo-list-item:nth-child(n+1) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .todo-btn-group {
