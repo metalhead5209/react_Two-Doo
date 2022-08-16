@@ -12,7 +12,6 @@ const TodoForm = (props) => {
 
   const handleChange = (e) => {
     setName(e.target.value)
-    console.log(name)
   }
 
   return (

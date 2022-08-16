@@ -23,7 +23,7 @@ function App() {
   ))
 
   const addTask = (taskName) => {
-    alert(taskName)
+    alert(taskName) 
   }
 
  
