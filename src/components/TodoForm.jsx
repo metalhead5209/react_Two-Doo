@@ -6,10 +6,10 @@ const TodoForm = (props) => {
   const [ taskName, setTaskName ] = useState('');
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (taskName === '') {
       alert("please enter a task")
     } else {
-      e.preventDefault();
       props.addTask(taskName);
       setTaskName('')
     }

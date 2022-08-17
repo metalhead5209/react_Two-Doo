@@ -26,12 +26,23 @@ function App() {
     console.log(currentTasks)
   };
 
+  const editTask = (id, newTask) => {
+    const editList = tasks.map((task) => {
+      if (id === task.id) {
+        return {...tasks, name: newTask}
+      }
+      return tasks
+    });
+    setTasks(editList)
+  }
+
   const todoList = tasks.map((task) => (
     <Todo 
     id={task.id} 
     name={task.name} 
     key={task.id} 
     deleteTask={deleteTask}
+    editTask={editTask}
     />
   ));
 
