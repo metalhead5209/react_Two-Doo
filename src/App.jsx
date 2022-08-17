@@ -26,14 +26,18 @@ function App() {
     console.log(currentTasks)
   };
 
-  const editTask = (id, newTask) => {
-    const editList = tasks.map((task) => {
+  const editTask = (id, editName) => {
+    const editList = [...tasks ].map((task) => {
       if (id === task.id) {
-        return {...tasks, name: newTask}
+        let newTask = {id: `td-${nanoid()}`, editName}
+        tasks.push(newTask)
+        return tasks
+        
       }
-      return tasks
+      return {...tasks}
     });
     setTasks(editList)
+    console.log(editList)
   }
 
   const todoList = tasks.map((task) => (
