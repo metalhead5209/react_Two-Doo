@@ -9,14 +9,14 @@ const Todo = (props) => {
     if (editName === '') {
       alert('please enter a task')
     } else {
-    props.editTask(props.id, newTask);
+    props.editTask(props.id, editName);
     setEditName('');
     setIsEditing(false);
     }
   }
 
   const handleChange = (e) => {
-
+    setEditName(e.target.value)
   }
 
   const listView = (
